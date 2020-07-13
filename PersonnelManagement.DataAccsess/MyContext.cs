@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PersonnelManagement.DataAccsess.Configurations;
+using PersonnelManagement.DataAccsess.Seeds;
 using PersonnelManagement.EntityFramework.Concrete;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace PersonnelManagement.DataAccsess
         public DbSet<Role> Roles { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Job> Jobs { get; set; }
-        public DbSet<JobRoles> PersonnelRoles { get; set; }
+        public DbSet<JobRoles> jobRoles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -38,6 +39,12 @@ namespace PersonnelManagement.DataAccsess
             modelBuilder.ApplyConfiguration(new JobConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new JobRolesConfiguration());
+
+            modelBuilder.ApplyConfiguration(new DepartmentSeed());
+            modelBuilder.ApplyConfiguration(new JobRolesSeed());
+            modelBuilder.ApplyConfiguration(new JobSeed());
+            modelBuilder.ApplyConfiguration(new PersonnelSeed());
+            modelBuilder.ApplyConfiguration(new RoleSeed());
 
         }
 

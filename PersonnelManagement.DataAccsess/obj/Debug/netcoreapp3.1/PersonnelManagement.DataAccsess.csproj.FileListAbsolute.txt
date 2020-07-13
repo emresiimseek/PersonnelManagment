@@ -14,7 +14,10 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\bin\Debug\n
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.AssemblyInfoInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.AssemblyInfo.cs
-C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.csproj.CopyComplete
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.pdb
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\bin\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.runtimeconfig.json
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\bin\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.runtimeconfig.dev.json
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.genruntimeconfig.cache
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.DataAccsess\obj\Debug\netcoreapp3.1\PersonnelManagement.DataAccsess.csproj.CoreCompileInputs.cache
