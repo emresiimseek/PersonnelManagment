@@ -57,3 +57,7 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcor
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.pdb
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.genruntimeconfig.cache
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FrameworkCore.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FrameworkCore.pdb
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\PersonnelManagement.Business.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\PersonnelManagement.Business.pdb

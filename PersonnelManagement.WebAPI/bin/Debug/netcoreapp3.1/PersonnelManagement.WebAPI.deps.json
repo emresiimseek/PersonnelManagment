@@ -27,6 +27,7 @@
           "Microsoft.EntityFrameworkCore": "3.1.5",
           "Microsoft.EntityFrameworkCore.Design": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
+          "PersonnelManagement.Business": "1.0.0",
           "PersonnelManagement.DataAccsess": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1220,9 +1221,33 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "FrameworkCore/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.5",
+          "PersonnelManagement.EntityFramework": "1.0.0"
+        },
+        "runtime": {
+          "FrameworkCore.dll": {}
+        },
+        "compile": {
+          "FrameworkCore.dll": {}
+        }
+      },
+      "PersonnelManagement.Business/1.0.0": {
+        "dependencies": {
+          "PersonnelManagement.DataAccsess": "1.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Business.dll": {}
+        },
+        "compile": {
+          "PersonnelManagement.Business.dll": {}
+        }
+      },
       "PersonnelManagement.DataAccsess/1.0.0": {
         "dependencies": {
           "FakerDotNet": "1.0.7",
+          "FrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
           "PersonnelManagement.EntityFramework": "1.0.0"
@@ -3479,6 +3504,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "FrameworkCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PersonnelManagement.DataAccsess/1.0.0": {
       "type": "project",

@@ -4,6 +4,130 @@
     "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.WebAPI\\PersonnelManagement.WebAPI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj",
+        "projectName": "FrameworkCore",
+        "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\Emre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Emre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.EntityFramework\\PersonnelManagement.EntityFramework.csproj": {
+                "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.EntityFramework\\PersonnelManagement.EntityFramework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj",
+        "projectName": "PersonnelManagement.Business",
+        "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj",
+        "packagesPath": "C:\\Users\\Emre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Emre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj": {
+                "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,6 +154,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj": {
+                "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj"
+              },
               "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.EntityFramework\\PersonnelManagement.EntityFramework.csproj": {
                 "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.EntityFramework\\PersonnelManagement.EntityFramework.csproj"
               }
@@ -170,6 +297,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj": {
+                "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj"
+              },
               "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj": {
                 "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj"
               }

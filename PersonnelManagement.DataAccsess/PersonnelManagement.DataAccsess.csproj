@@ -19,7 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FrameworkCore\FrameworkCore.csproj" />
     <ProjectReference Include="..\PersonnelManagement.EntityFramework\PersonnelManagement.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstract\" />
   </ItemGroup>
 
 </Project>

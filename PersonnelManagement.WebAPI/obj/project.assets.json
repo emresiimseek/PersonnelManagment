@@ -1278,11 +1278,39 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "FrameworkCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.5",
+          "PersonnelManagement.EntityFramework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FrameworkCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FrameworkCore.dll": {}
+        }
+      },
+      "PersonnelManagement.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "PersonnelManagement.DataAccsess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersonnelManagement.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelManagement.Business.dll": {}
+        }
+      },
       "PersonnelManagement.DataAccsess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "FakerDotNet": "1.0.7",
+          "FrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5",
           "PersonnelManagement.EntityFramework": "1.0.0"
@@ -4988,6 +5016,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "FrameworkCore/1.0.0": {
+      "type": "project",
+      "path": "../FrameworkCore/FrameworkCore.csproj",
+      "msbuildProject": "../FrameworkCore/FrameworkCore.csproj"
+    },
+    "PersonnelManagement.Business/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelManagement.Business/PersonnelManagement.Business.csproj",
+      "msbuildProject": "../PersonnelManagement.Business/PersonnelManagement.Business.csproj"
+    },
     "PersonnelManagement.DataAccsess/1.0.0": {
       "type": "project",
       "path": "../PersonnelManagement.DataAccsess/PersonnelManagement.DataAccsess.csproj",
@@ -5004,6 +5042,7 @@
       "Microsoft.EntityFrameworkCore >= 3.1.5",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5",
+      "PersonnelManagement.Business >= 1.0.0",
       "PersonnelManagement.DataAccsess >= 1.0.0"
     ]
   },
@@ -5037,6 +5076,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj": {
+              "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.Business\\PersonnelManagement.Business.csproj"
+            },
             "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj": {
               "projectPath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj"
             }
