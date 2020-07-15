@@ -24,10 +24,16 @@ namespace PersonnelManagement.WebAPI.Controllers
             _autoMapperBase = autoMapperBase;
             _departmentService = departmentService;
         }
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [HttpGet("personnels")]
+        public async Task<IActionResult> GetAllDepartmentWithChild()
         {
             List<Department> departments = await _departmentService.GetAllDepartmentWithChild();
+            return Ok(_autoMapperBase.MapToSameList<Department, DepartmentWithPersonnelDto>(departments));
+        }
+        [HttpGet]
+        public  IActionResult GetAll()
+        {
+            List<Department> departments =  _departmentService.GetAll().ToList();
             return Ok(_autoMapperBase.MapToSameList<Department, DepartmentDto>(departments));
         }
         [HttpGet("{id}")]
@@ -45,15 +51,15 @@ namespace PersonnelManagement.WebAPI.Controllers
         [HttpPut]
         public IActionResult Update(DepartmentDto departmentDto)
         {
-            Department department= _autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto);
+            Department department = _autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto);
             _departmentService.Update(department);
             return NoContent();
         }
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-             _departmentService.Delete(id);
-            return  NoContent();
+            _departmentService.Delete(id);
+            return NoContent();
         }
 
     }

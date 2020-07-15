@@ -18,7 +18,7 @@ namespace PersonnelManagement.DataAccsess.Concrate
         }
         public async Task<List<Department>> GetAllDepartmentWithChild()
         {
-            return await myContext.Departments.Include(i => i.Personnels).ThenInclude(it => it.Job).ToListAsync();
+            return await myContext.Departments.Include(i => i.Personnels).ToListAsync();
         }
     }
 }
