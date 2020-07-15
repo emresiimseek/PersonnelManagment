@@ -62,6 +62,7 @@ namespace PersonnelManagement.Business.Concrate
         public void Update(Department department)
         {
             _unitOfWork.Department.Update(department);
+            _unitOfWork.Commit();
         }
     }
 }

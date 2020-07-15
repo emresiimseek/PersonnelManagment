@@ -42,5 +42,19 @@ namespace PersonnelManagement.WebAPI.Controllers
             var newDepartment = await _departmentService.AddAsync(_autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto));
             return Created(string.Empty, _autoMapperBase.MapToSameType<Department, DepartmentDto>(newDepartment));
         }
+        [HttpPut]
+        public IActionResult Update(DepartmentDto departmentDto)
+        {
+            Department department= _autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto);
+            _departmentService.Update(department);
+            return NoContent();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+             _departmentService.Delete(id);
+            return  NoContent();
+        }
+
     }
 }

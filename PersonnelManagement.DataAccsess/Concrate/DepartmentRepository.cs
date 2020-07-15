@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PersonnelManagement.DataAccsess.Concrate
 {
-    public class DepartmentRepository: EntityRepositoryBase<Department>, IDepartmentRepository
+    public class DepartmentRepository : EntityRepositoryBase<Department>, IDepartmentRepository
     {
         private MyContext myContext { get => _dbContext as MyContext; }
         public DepartmentRepository(DbContext context) : base(context)
@@ -18,9 +18,7 @@ namespace PersonnelManagement.DataAccsess.Concrate
         }
         public async Task<List<Department>> GetAllDepartmentWithChild()
         {
-
-            return await myContext.Departments.Include(i=>i.Personnels).ThenInclude(it=>it.Job).ToListAsync();
-
+            return await myContext.Departments.Include(i => i.Personnels).ThenInclude(it => it.Job).ToListAsync();
         }
     }
 }
