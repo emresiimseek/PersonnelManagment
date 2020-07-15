@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace PersonnelManagement.EntityFramework.Concrete.DTOs
+namespace PersonnelManagement.EntityFramework.Concrate.DTOs
 {
     public class DepartmentDto
     {

@@ -21,7 +21,7 @@ namespace PersonnelManagement.DataAccsess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.Department", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.Department", b =>
                 {
                     b.Property<int>("DepartmentId")
                         .ValueGeneratedOnAdd()
@@ -83,7 +83,7 @@ namespace PersonnelManagement.DataAccsess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.Job", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.Job", b =>
                 {
                     b.Property<int>("JobId")
                         .ValueGeneratedOnAdd()
@@ -152,7 +152,7 @@ namespace PersonnelManagement.DataAccsess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.JobRoles", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.JobRoles", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -232,7 +232,7 @@ namespace PersonnelManagement.DataAccsess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.Personnel", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.Personnel", b =>
                 {
                     b.Property<int>("PersonnelId")
                         .ValueGeneratedOnAdd()
@@ -400,7 +400,7 @@ namespace PersonnelManagement.DataAccsess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.Role", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.Role", b =>
                 {
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
@@ -469,30 +469,30 @@ namespace PersonnelManagement.DataAccsess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.JobRoles", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.JobRoles", b =>
                 {
-                    b.HasOne("PersonnelManagement.EntityFramework.Concrete.Job", "Job")
+                    b.HasOne("PersonnelManagement.EntityFramework.Concrate.Job", "Job")
                         .WithMany("JobRoles")
                         .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PersonnelManagement.EntityFramework.Concrete.Role", "Role")
+                    b.HasOne("PersonnelManagement.EntityFramework.Concrate.Role", "Role")
                         .WithMany("JobRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrete.Personnel", b =>
+            modelBuilder.Entity("PersonnelManagement.EntityFramework.Concrate.Personnel", b =>
                 {
-                    b.HasOne("PersonnelManagement.EntityFramework.Concrete.Department", "Department")
+                    b.HasOne("PersonnelManagement.EntityFramework.Concrate.Department", "Department")
                         .WithMany("Personnels")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PersonnelManagement.EntityFramework.Concrete.Job", "Job")
+                    b.HasOne("PersonnelManagement.EntityFramework.Concrate.Job", "Job")
                         .WithMany("Personnels")
                         .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)

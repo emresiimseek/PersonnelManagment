@@ -13,9 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PersonnelManagement.DataAccsess;
-using FrameworkCore.Concrete;
-using PersonnelManagement.DataAccsess.Concrete;
-using PersonnelManagement.Business.Concrete;
+using FrameworkCore.Concrate;
+using PersonnelManagement.DataAccsess.Concrate;
+using PersonnelManagement.Business.Concrate;
 using PersonnelManagement.Business.Abstract;
 using FrameworkCore.Utilities.Mappings;
 

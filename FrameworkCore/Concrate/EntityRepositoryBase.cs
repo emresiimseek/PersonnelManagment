@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FrameworkCore.Concrete
+namespace FrameworkCore.Concrate
 {
     public class EntityRepositoryBase<TEntity> : IRepository<TEntity>
         where TEntity : class, new()

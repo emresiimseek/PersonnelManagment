@@ -6,7 +6,7 @@ C:\Users\Emre\source\repos\Personnel\FrameworkCore\bin\Debug\netcoreapp3.1\Perso
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.AssemblyInfoInputs.cache
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.AssemblyInfo.cs
+C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.csproj.CopyComplete
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.dll
 C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.pdb
-C:\Users\Emre\source\repos\Personnel\FrameworkCore\obj\Debug\netcoreapp3.1\FrameworkCore.csproj.CoreCompileInputs.cache

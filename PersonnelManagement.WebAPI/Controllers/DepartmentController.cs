@@ -6,8 +6,8 @@ using FrameworkCore.Utilities.Mappings;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PersonnelManagement.Business.Abstract;
-using PersonnelManagement.EntityFramework.Concrete;
-using PersonnelManagement.EntityFramework.Concrete.DTOs;
+using PersonnelManagement.EntityFramework.Concrate;
+using PersonnelManagement.EntityFramework.Concrate.DTOs;
 
 namespace PersonnelManagement.WebAPI.Controllers
 {

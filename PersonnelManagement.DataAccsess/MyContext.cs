@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PersonnelManagement.DataAccsess.Configurations;
 using PersonnelManagement.DataAccsess.Seeds;
-using PersonnelManagement.EntityFramework.Concrete;
+using PersonnelManagement.EntityFramework.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Text;

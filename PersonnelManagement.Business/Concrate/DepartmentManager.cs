@@ -1,13 +1,13 @@
 ﻿using FrameworkCore.Abstract;
 using PersonnelManagement.Business.Abstract;
-using PersonnelManagement.EntityFramework.Concrete;
+using PersonnelManagement.EntityFramework.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonnelManagement.Business.Concrete
+namespace PersonnelManagement.Business.Concrate
 {
     public class DepartmentManager: IDepartmentService
     {

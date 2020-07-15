@@ -1,14 +1,14 @@
 ﻿using FrameworkCore.Abstract;
-using FrameworkCore.Concrete;
+using FrameworkCore.Concrate;
 using Microsoft.EntityFrameworkCore;
-using PersonnelManagement.EntityFramework.Concrete;
+using PersonnelManagement.EntityFramework.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PersonnelManagement.DataAccsess.Concrete
+namespace PersonnelManagement.DataAccsess.Concrate
 {
     public class DepartmentRepository: EntityRepositoryBase<Department>, IDepartmentRepository
     {

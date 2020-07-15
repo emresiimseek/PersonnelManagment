@@ -1,13 +1,13 @@
 ﻿using FrameworkCore.Abstract;
 using Microsoft.EntityFrameworkCore;
-using PersonnelManagement.DataAccsess.Concrete;
+using PersonnelManagement.DataAccsess.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace FrameworkCore.Concrete
+namespace FrameworkCore.Concrate
 {
     public class UnitOfWork : IUnitOfWork
     {

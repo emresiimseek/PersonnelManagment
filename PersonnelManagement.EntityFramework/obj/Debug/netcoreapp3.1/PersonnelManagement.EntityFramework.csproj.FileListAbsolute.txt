@@ -15,4 +15,3 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.EntityFramework\obj\Deb
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.EntityFramework\obj\Debug\netcoreapp3.1\PersonnelManagement.EntityFramework.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.EntityFramework\obj\Debug\netcoreapp3.1\PersonnelManagement.EntityFramework.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.EntityFramework\obj\Debug\netcoreapp3.1\PersonnelManagement.EntityFramework.pdb
-C:\Users\Emre\source\repos\Personnel\PersonnelManagement.EntityFramework\obj\Debug\netcoreapp3.1\PersonnelManagement.EntityFramework.csprojAssemblyReference.cache
