@@ -12,7 +12,7 @@ namespace PersonnelManagement.DataAccsess
     {
         public MyContext(DbContextOptions<MyContext> options) : base(options)
         {
-
+           
         }
 
         public DbSet<Personnel> Personnels { get; set; }
@@ -39,7 +39,6 @@ namespace PersonnelManagement.DataAccsess
             modelBuilder.ApplyConfiguration(new JobConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new JobRolesConfiguration());
-
             modelBuilder.ApplyConfiguration(new DepartmentSeed());
             modelBuilder.ApplyConfiguration(new JobRolesSeed());
             modelBuilder.ApplyConfiguration(new JobSeed());

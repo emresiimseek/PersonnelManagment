@@ -18,7 +18,7 @@ namespace FrameworkCore.Concrete
             _dbContext = dbContext;
         }
 
-        public IDepartmentRepository department => _department = _department ?? new DepartmentRepository(_dbContext);
+        public IDepartmentRepository Department => _department = _department ?? new DepartmentRepository(_dbContext);
 
         public void Commit()
         {

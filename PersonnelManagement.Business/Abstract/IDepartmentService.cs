@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PersonnelManagement.Business.Abstract
 {
-    public interface IDepartmentService
+    public interface IDepartmentService:IService<Department>
     {
-        Task AddAsync(Department department);
+        Task<List<Department>> GetAllDepartmentWithChild();
     }
 }

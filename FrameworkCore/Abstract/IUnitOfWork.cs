@@ -7,7 +7,7 @@ namespace FrameworkCore.Abstract
 {
    public interface IUnitOfWork
     {
-        IDepartmentRepository department { get; }
+        IDepartmentRepository Department { get; }
         Task CommitAsync();
         void Commit();
     }

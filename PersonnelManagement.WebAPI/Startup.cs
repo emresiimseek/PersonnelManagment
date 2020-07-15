@@ -17,6 +17,7 @@ using FrameworkCore.Concrete;
 using PersonnelManagement.DataAccsess.Concrete;
 using PersonnelManagement.Business.Concrete;
 using PersonnelManagement.Business.Abstract;
+using FrameworkCore.Utilities.Mappings;
 
 namespace PersonnelManagement.WebAPI
 {
@@ -37,6 +38,9 @@ namespace PersonnelManagement.WebAPI
             services.AddScoped(typeof(IDepartmentRepository), typeof(DepartmentRepository));
             services.AddScoped(typeof(IDepartmentService), typeof(DepartmentManager));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+            services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
+            services.AddControllers().AddNewtonsoftJson(option =>
+            option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
 
             services.AddDbContext<MyContext>(options =>
