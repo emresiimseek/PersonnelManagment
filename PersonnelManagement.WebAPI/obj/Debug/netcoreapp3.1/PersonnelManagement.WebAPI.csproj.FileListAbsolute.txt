@@ -57,8 +57,6 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcor
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.AssemblyInfoInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.AssemblyInfo.cs
-C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.csproj.CoreCompileInputs.cache
-C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.csproj.CopyComplete
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\PersonnelManagement.WebAPI.StaticWebAssets.Manifest.cache
@@ -66,3 +64,9 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcor
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.pdb
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.genruntimeconfig.cache
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cache

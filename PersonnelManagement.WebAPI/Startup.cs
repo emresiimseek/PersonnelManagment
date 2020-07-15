@@ -18,6 +18,10 @@ using PersonnelManagement.DataAccsess.Concrate;
 using PersonnelManagement.Business.Concrate;
 using PersonnelManagement.Business.Abstract;
 using FrameworkCore.Utilities.Mappings;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using PersonnelManagement.EntityFramework.Concrate;
+using PersonnelManagement.Business.ValidationRules.FluentValidation;
 
 namespace PersonnelManagement.WebAPI
 {
@@ -41,6 +45,7 @@ namespace PersonnelManagement.WebAPI
             services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
             services.AddControllers().AddNewtonsoftJson(option =>
             option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<DepartmentValidator>());
 
 
             services.AddDbContext<MyContext>(options =>

@@ -10,7 +10,7 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\bin\Debug\netc
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.AssemblyInfoInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.AssemblyInfo.cs
-C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.csproj.CopyComplete
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.pdb
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.Business\obj\Debug\netcoreapp3.1\PersonnelManagement.Business.csproj.CoreCompileInputs.cache

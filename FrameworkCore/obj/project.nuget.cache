@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8f6Srs970VR3X0WUNJsHbXWNIbbCFM/YDLWCDSeb/qpyhNjN5k6wMOHrFLEIYH59X+nSoatevDM8FU9+VQXdGA==",
+  "dgSpecHash": "Q4EBn1+NqwbjZGVTgpuzstPgWPhKp5J/Z1p/THQEuSKQ73P4yDpLTb7SuqR1wdaVRe167Kzq6ktrU3zguc30SQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emre\\source\\repos\\Personnel\\FrameworkCore\\FrameworkCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.0.1\\fluentvalidation.aspnetcore.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.0.1\\fluentvalidation.dependencyinjectionextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

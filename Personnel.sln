@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelManagement.WebAPI"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkCore", "FrameworkCore\FrameworkCore.csproj", "{091BC68C-28BC-4570-9A37-7D4BFF6915DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManagement.Business", "PersonnelManagement.Business\PersonnelManagement.Business.csproj", "{F965036A-F7C7-4F83-BD9B-CDF6930FC6C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonnelManagement.Business", "PersonnelManagement.Business\PersonnelManagement.Business.csproj", "{F965036A-F7C7-4F83-BD9B-CDF6930FC6C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

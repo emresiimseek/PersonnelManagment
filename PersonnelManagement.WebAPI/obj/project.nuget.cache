@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "tAMOOECRr078uickqidbDqVsw63PleRlLYPg6j4x8KtjvmnAsnY7rEtOTUb5a16jGGqi5NJWK6Bt02V+5/a0uA==",
+  "dgSpecHash": "nQ25P+zBdNhfy3/Y6dDft8kqgirKrW9FwnglGgtCZBJOrjpjPYaUsQNrn7WQEFuCIexv8nNkZwvExzPkXk0bVQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.WebAPI\\PersonnelManagement.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\fakerdotnet\\1.0.7\\fakerdotnet.1.0.7.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.0.1\\fluentvalidation.aspnetcore.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.0.1\\fluentvalidation.dependencyinjectionextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.6\\microsoft.aspnetcore.jsonpatch.3.1.6.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.6\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.6.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

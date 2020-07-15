@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "08+6XYakZuWfuqENHQvzQIf0mAJDYCpwsfsOmG0aJxuyF6DUmZYjtxABO7FYum3LFNIyU1KWqGa06+bl0mEnXQ==",
+  "dgSpecHash": "xFXVJohT4qWDbfQ8ZIbXf4ZVgq6IKk9TnypZBIk9O2dISupmrx3zE6TM4OHI02hyU6yhMnVtFYwDhL1DOlxrkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emre\\source\\repos\\Personnel\\PersonnelManagement.DataAccsess\\PersonnelManagement.DataAccsess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\fakerdotnet\\1.0.7\\fakerdotnet.1.0.7.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation\\9.0.1\\fluentvalidation.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.0.1\\fluentvalidation.aspnetcore.9.0.1.nupkg.sha512",
+    "C:\\Users\\Emre\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.0.1\\fluentvalidation.dependencyinjectionextensions.9.0.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Emre\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
