@@ -22,6 +22,7 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.Business.ValidationRules.FluentValidation;
+using PersonnelManagement.EntityFramework.Concrate.DTOs;
 
 namespace PersonnelManagement.WebAPI
 {
@@ -45,8 +46,18 @@ namespace PersonnelManagement.WebAPI
             services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
             services.AddControllers().AddNewtonsoftJson(option =>
             option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<DepartmentValidator>());
+            
+            //Fluent Validation Configurations
+            services.AddMvc(setup => {
+                //...mvc setup...
+            }).AddFluentValidation();
+            services.AddTransient<IValidator<DepartmentDto>, DepartmentValidator>();
+            //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<DepartmentValidator>());
 
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
             services.AddDbContext<MyContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString(), o =>
@@ -55,6 +66,7 @@ namespace PersonnelManagement.WebAPI
                  });
             });
             services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

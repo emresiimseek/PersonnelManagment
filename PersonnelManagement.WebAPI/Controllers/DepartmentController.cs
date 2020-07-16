@@ -9,7 +9,7 @@ using PersonnelManagement.Business.Abstract;
 using PersonnelManagement.Business.ValidationRules.FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.EntityFramework.Concrate.DTOs;
-
+using PersonnelManagement.WebAPI.Filters.FluentValidation;
 
 namespace PersonnelManagement.WebAPI.Controllers
 {
@@ -43,6 +43,7 @@ namespace PersonnelManagement.WebAPI.Controllers
             return Ok(_autoMapperBase.MapToSameType<Department, DepartmentDto>(department));
         }
         [HttpPost]
+        [ValidationFilter]
         public async Task<IActionResult> Save(DepartmentDto departmentDto)
         {
             var newDepartment = await _departmentService.AddAsync(_autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto));
