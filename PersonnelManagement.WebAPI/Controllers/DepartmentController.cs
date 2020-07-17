@@ -9,6 +9,7 @@ using PersonnelManagement.Business.Abstract;
 using PersonnelManagement.Business.ValidationRules.FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.EntityFramework.Concrate.DTOs;
+using PersonnelManagement.WebAPI.Filters;
 using PersonnelManagement.WebAPI.Filters.FluentValidation;
 
 namespace PersonnelManagement.WebAPI.Controllers
@@ -37,6 +38,7 @@ namespace PersonnelManagement.WebAPI.Controllers
             return Ok(_autoMapperBase.MapToSameList<Department, DepartmentDto>(departments));
         }
         [HttpGet("{id}")]
+        [ServiceFilter(typeof(IsExistDepartmentFilter))]
         public async Task<IActionResult> GetById(int id)
         {
             Department department = await _departmentService.GetByIdAsync(id);

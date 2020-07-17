@@ -23,6 +23,7 @@ using FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.Business.ValidationRules.FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate.DTOs;
+using PersonnelManagement.WebAPI.Filters;
 
 namespace PersonnelManagement.WebAPI
 {
@@ -44,8 +45,11 @@ namespace PersonnelManagement.WebAPI
             services.AddScoped(typeof(IDepartmentService), typeof(DepartmentManager));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
+            services.AddScoped<IsExistDepartmentFilter>();
             services.AddControllers().AddNewtonsoftJson(option =>
             option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            //services.AddScoped<DepartmentManager>();
+          
             
             //Fluent Validation Configurations
             services.AddMvc(setup => {
