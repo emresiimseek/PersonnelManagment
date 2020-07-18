@@ -1,0 +1,25 @@
+﻿@model DepartmentDto
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form asp-action="Delete">
+                <div class="form-group">
+                    <input asp-for="DepartmentId" class="form-control mb-1" readonly />
+                    <input asp-for="Name" class="form-control mb-1" readonly />
+                    <input asp-for="CreatedOn" class="form-control mb-1" readonly />
+                    <input asp-for="ModifiedOn" class="form-control mb-1" readonly />
+                </div>
+                <input type="submit" name="name" value="Sil" class="btn btn-danger mb-1" />
+
+            </form>
+        </div>
+    </div>
+
+</div>
+

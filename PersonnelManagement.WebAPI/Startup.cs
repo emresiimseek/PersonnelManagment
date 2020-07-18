@@ -46,6 +46,7 @@ namespace PersonnelManagement.WebAPI
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
             services.AddScoped<IsExistDepartmentFilter>();
+
             services.AddControllers().AddNewtonsoftJson(option =>
             option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             //services.AddScoped<DepartmentManager>();

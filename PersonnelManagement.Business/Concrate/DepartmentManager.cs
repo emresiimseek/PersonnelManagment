@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PersonnelManagement.Business.Concrate
 {
-    public class DepartmentManager: IDepartmentService
+    public class DepartmentManager : IDepartmentService
     {
         private IDepartmentRepository _departmentRepository;
         private IUnitOfWork _unitOfWork;
@@ -22,8 +22,10 @@ namespace PersonnelManagement.Business.Concrate
 
         public async Task<Department> AddAsync(Department department)
         {
-              await _unitOfWork.Department.AddAsync(department);
-             await _unitOfWork.CommitAsync();
+            department.CreatedOn = DateTime.Now;
+            department.ModifiedOn = DateTime.Now;
+            await _unitOfWork.Department.AddAsync(department);
+            await _unitOfWork.CommitAsync();
             return department;
         }
 
@@ -56,11 +58,12 @@ namespace PersonnelManagement.Business.Concrate
 
         public async Task<Department> GetByIdAsync(int Id)
         {
-           return await _unitOfWork.Department.GetByIdAsync(Id);
+            return await _unitOfWork.Department.GetByIdAsync(Id);
         }
 
         public void Update(Department department)
         {
+            department.ModifiedOn = DateTime.Now;
             _unitOfWork.Department.Update(department);
             _unitOfWork.Commit();
         }

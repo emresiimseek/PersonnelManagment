@@ -1,0 +1,38 @@
+﻿@model List<DepartmentDto>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Departments</h1>
+@*<a class="btn btn-primary mb-1" asp-action="Create">Katogori Ekle</a>*@
+@Html.ActionLink("Kategori Ekle","Create","Department",string.Empty,new {@class="btn btn-primary mb-1" })
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>DepartmentId</th>
+            <th>Name</th>
+            <th>CreatedOn</th>
+            <th>ModifiedOn</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DepartmentDto departmentDto in Model)
+        {
+            <tr>
+                <td>@departmentDto.DepartmentId</td>
+                <td>@departmentDto.Name</td>
+                <td>@departmentDto.CreatedOn</td>
+                <td>@departmentDto.ModifiedOn</td>
+                <td>
+                    @Html.ActionLink("Düzenle","Edit","Department",new { id = departmentDto.DepartmentId },new {@class="btn btn-warning"})
+                    @Html.ActionLink("Sil","Delete","Department",new { id = departmentDto.DepartmentId }, new { @class = "btn btn-danger" } )
+                    @*<a asp-action="Edit" asp-route-id="@departmentDto.DepartmentId">Düzenle</a>
+                    <a asp-action="Delete" asp-route-id="@departmentDto.DepartmentId">Sil</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

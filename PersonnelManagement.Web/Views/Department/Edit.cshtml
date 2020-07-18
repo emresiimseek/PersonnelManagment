@@ -1,0 +1,28 @@
+﻿@model DepartmentDto
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <form action="/Department/Edit" method="post">
+                <div class="form-group">
+                    <input asp-for="DepartmentId" class="form-control mb-1" type="text" style="visibility:hidden" />
+                    <input asp-for="Name" class="form-control mb-1" type="text" />
+                    <input asp-for="CreatedOn" class="form-control mb-1" type="text" readonly />
+                    <input asp-for="ModifiedOn" class="form-control mb-1" type="text" readonly />
+                    <input type="submit" name="name" value="Gönder" class="btn btn-success mb-1" />
+                </div>
+            </form>
+          
+        </div>
+
+    </div>
+
+</div>
+
