@@ -12,6 +12,7 @@ namespace PersonnelManagement.Business.ValidationRules.FluentValidation
         public DepartmentValidator()
         {
             RuleFor(d => d.Name).NotEmpty();
+            RuleFor(d => d.DepartmentId).NotEmpty();
             RuleFor(d => d.DepartmentId).GreaterThan(0);
         }
     }

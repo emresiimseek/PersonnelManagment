@@ -52,6 +52,7 @@ namespace PersonnelManagement.WebAPI.Controllers
             return Created(string.Empty, _autoMapperBase.MapToSameType<Department, DepartmentDto>(newDepartment));
         }
         [HttpPut]
+        [ValidationFilter]
         public IActionResult Update(DepartmentDto departmentDto)
         {
             Department department = _autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto);
@@ -59,6 +60,7 @@ namespace PersonnelManagement.WebAPI.Controllers
             return NoContent();
         }
         [HttpDelete("{id}")]
+        [ValidationFilter]
         public IActionResult Delete(int id)
         {
             _departmentService.Delete(id);
