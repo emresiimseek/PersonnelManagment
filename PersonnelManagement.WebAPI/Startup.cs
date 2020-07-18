@@ -57,6 +57,7 @@ namespace PersonnelManagement.WebAPI
                 //...mvc setup...
             }).AddFluentValidation();
             services.AddTransient<IValidator<DepartmentDto>, DepartmentValidator>();
+            services.AddTransient<IValidator<UpdateDepartmentDto>, UpdateDepartmentValidator>();
             //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<DepartmentValidator>());
 
             services.Configure<ApiBehaviorOptions>(options =>

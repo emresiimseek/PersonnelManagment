@@ -52,13 +52,15 @@ namespace PersonnelManagement.WebAPI.Controllers
             return Created(string.Empty, _autoMapperBase.MapToSameType<Department, DepartmentDto>(newDepartment));
         }
         [HttpPut]
-        public IActionResult Update(DepartmentDto departmentDto)
+        [ValidationFilter]
+        public IActionResult Update(UpdateDepartmentDto updateDepartmentDto)
         {
-            Department department = _autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto);
+            Department department = _autoMapperBase.MapToSameType<UpdateDepartmentDto, Department>(updateDepartmentDto);
             _departmentService.Update(department);
             return NoContent();
         }
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(IsExistDepartmentFilter))]
         public IActionResult Delete(int id)
         {
             _departmentService.Delete(id);

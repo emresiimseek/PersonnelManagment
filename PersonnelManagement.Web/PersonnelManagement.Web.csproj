@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FrameworkCore\FrameworkCore.csproj" />
-    <ProjectReference Include="..\PersonnelManagement.Business\PersonnelManagement.Business.csproj" />
+    <ProjectReference Include="..\PersonnelManagement.EntityFramework\PersonnelManagement.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

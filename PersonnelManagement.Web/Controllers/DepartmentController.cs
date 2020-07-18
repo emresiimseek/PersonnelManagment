@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FrameworkCore.Utilities.Mappings;
 using Microsoft.AspNetCore.Mvc;
-using PersonnelManagement.Business.Abstract;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.EntityFramework.Concrate.DTOs;
+using PersonnelManagement.Web.ApiService;
 
 namespace PersonnelManagement.Web.Controllers
 {
     public class DepartmentController : Controller
     {
-        private IDepartmentService _departmentService;
-        private IAutoMapperBase _autoMapperBase;
-        public DepartmentController(IDepartmentService departmentService, IAutoMapperBase autoMapperBase)
+        private DepartmentApiService _departmentApiService;
+        public DepartmentController(DepartmentApiService departmentApiService)
         {
-            _autoMapperBase = autoMapperBase;
-            _departmentService = departmentService;
+            _departmentApiService = departmentApiService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Department> departments= _departmentService.GetAll().ToList();
-            return View(_autoMapperBase.MapToSameList<Department,DepartmentDto>(departments));
+
+            IEnumerable<DepartmentDto> departmentDtos = await _departmentApiService.GetAllAsync();
+            List<DepartmentDto> departments = departmentDtos.ToList();
+            return View(departments);
         }
 
         public IActionResult Create()
@@ -32,32 +31,32 @@ namespace PersonnelManagement.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(DepartmentDto departmentDto)
         {
-            await _departmentService.AddAsync(_autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto));
-            return View(departmentDto);
+            await _departmentApiService.AddAsync(departmentDto);
+            return RedirectToAction("Index", "Department");
         }
 
         public async Task<IActionResult> Edit(int Id)
         {
-            Department department= await _departmentService.GetByIdAsync(Id);
-            return View(_autoMapperBase.MapToSameType<Department, DepartmentDto>(department));
+            UpdateDepartmentDto updateDepartmentDto = await _departmentApiService.GetByIdUpdateDtoAsync(Id);
+            return View(updateDepartmentDto);
         }
         [HttpPost]
-        public IActionResult Edit(DepartmentDto departmentDto)
+        public async Task<IActionResult> Edit(UpdateDepartmentDto updateDepartmentDto)
         {
-            _departmentService.Update(_autoMapperBase.MapToSameType<DepartmentDto,Department>(departmentDto));
-            return View((departmentDto));
+            await _departmentApiService.Update(updateDepartmentDto);
+            return View((updateDepartmentDto));
         }
         public async Task<IActionResult> Delete(int Id)
         {
-            Department department =await _departmentService.GetByIdAsync(Id);
-            return View(_autoMapperBase.MapToSameType<Department, DepartmentDto>(department));
+            DepartmentDto departmentDto = await _departmentApiService.GetByIdAsync(Id);
+            return View(departmentDto);
 
         }
         [HttpPost]
-        public IActionResult Delete(DepartmentDto departmentDto)
+        public async Task<IActionResult> Delete(DepartmentDto departmentDto)
         {
-            _departmentService.Delete(_autoMapperBase.MapToSameType<DepartmentDto, Department>(departmentDto));
-            return RedirectToAction("Index","Department");
+            await _departmentApiService.Delete(departmentDto.DepartmentId);
+            return RedirectToAction("Index", "Department");
         }
     }
 }

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentValidation.AspNetCore;
-using FrameworkCore.Abstract;
-using FrameworkCore.Concrate;
-using FrameworkCore.Utilities.Mappings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,11 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PersonnelManagement.Business.Abstract;
-using PersonnelManagement.Business.Concrate;
-using PersonnelManagement.Business.ValidationRules.FluentValidation;
-using PersonnelManagement.DataAccsess;
-using PersonnelManagement.DataAccsess.Concrate;
+using PersonnelManagement.Web.ApiService;
 
 namespace PersonnelManagement.Web
 {
@@ -33,21 +26,11 @@ namespace PersonnelManagement.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped(typeof(IDepartmentService), typeof(DepartmentManager));
-            services.AddScoped(typeof(IAutoMapperBase), typeof(AutoMapperHelper));
-            services.AddScoped(typeof(IRepository<>), typeof(EntityRepositoryBase<>));
-            services.AddScoped(typeof(IDepartmentRepository), typeof(DepartmentRepository));
-            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
-            services.AddScoped<DbContext, MyContext>();
-
-            services.AddDbContext<MyContext>(options =>
+            //For HttpClient
+            services.AddHttpClient<DepartmentApiService>(option =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString(), o =>
-                {
-                    o.MigrationsAssembly("PersonnelManagement.DataAccsess");
-                });
+                option.BaseAddress = new Uri(Configuration["baseUrl"]);
             });
-            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<DepartmentValidator>());
             services.AddControllersWithViews();
         }
 
