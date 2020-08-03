@@ -20,6 +20,8 @@ namespace PersonnelManagement.DataAccsess.Seeds
                 builder.HasData(new Personnel { PersonnelId = i,
                     Name = Faker.Name.FirstName(),
                     LastName = Faker.Name.LastName(),
+                    UserName = Faker.Name.Title(),
+                    Password = Faker.Name.Prefix(),
                     Salary = 2500.15m*i,
                     CreatedOn=Faker.Date.Backward(365),
                     ModifiedOn=Faker.Date.Backward(365),

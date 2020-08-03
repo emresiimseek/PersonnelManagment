@@ -67,6 +67,13 @@ C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcor
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Emre\source\repos\Personnel\PersonnelManagement.WebAPI\obj\Debug\netcoreapp3.1\PersonnelManagement.WebAPI.MvcApplicationPartsAssemblyInfo.cache

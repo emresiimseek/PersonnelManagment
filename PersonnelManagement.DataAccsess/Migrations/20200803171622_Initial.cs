@@ -62,6 +62,9 @@ namespace PersonnelManagement.DataAccsess.Migrations
                     ModifiedOn = table.Column<DateTime>(type: "datetime", nullable: false),
                     Name = table.Column<string>(maxLength: 200, nullable: false),
                     LastName = table.Column<string>(maxLength: 200, nullable: false),
+                    UserName = table.Column<string>(maxLength: 200, nullable: false),
+                    Password = table.Column<string>(maxLength: 50, nullable: false),
+                    Token = table.Column<string>(nullable: true),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DateOfRecuitment = table.Column<DateTime>(type: "datetime", nullable: false),
                     EmploymentendDate = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -118,11 +121,11 @@ namespace PersonnelManagement.DataAccsess.Migrations
                 columns: new[] { "DepartmentId", "CreatedOn", "ModifiedOn", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2019, 8, 21, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 23, 0, 0, 0, 0, DateTimeKind.Utc), "Hoppe and Sporer" },
-                    { 2, new DateTime(2019, 8, 6, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 15, 0, 0, 0, 0, DateTimeKind.Utc), "Boyer-Aufderhar" },
-                    { 3, new DateTime(2019, 12, 25, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 12, 8, 0, 0, 0, 0, DateTimeKind.Utc), "Parker and Lehner" },
-                    { 4, new DateTime(2019, 12, 6, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 30, 0, 0, 0, 0, DateTimeKind.Utc), "Barrows and Haag" },
-                    { 5, new DateTime(2020, 6, 5, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 11, 0, 0, 0, 0, DateTimeKind.Utc), "Durgan-Beatty" }
+                    { 1, new DateTime(2020, 4, 8, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 4, 15, 0, 0, 0, 0, DateTimeKind.Utc), "White Inc" },
+                    { 2, new DateTime(2019, 12, 15, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 7, 12, 0, 0, 0, 0, DateTimeKind.Utc), "Stokes" },
+                    { 3, new DateTime(2019, 10, 17, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 13, 0, 0, 0, 0, DateTimeKind.Utc), "Little-Kling" },
+                    { 4, new DateTime(2020, 4, 19, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 30, 0, 0, 0, 0, DateTimeKind.Utc), "Berge-Zieme" },
+                    { 5, new DateTime(2020, 4, 7, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 17, 0, 0, 0, 0, DateTimeKind.Utc), "Harber" }
                 });
 
             migrationBuilder.InsertData(
@@ -130,12 +133,12 @@ namespace PersonnelManagement.DataAccsess.Migrations
                 columns: new[] { "JobId", "CreatedOn", "ModifiedOn", "Name" },
                 values: new object[,]
                 {
-                    { 6, new DateTime(2019, 10, 4, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 7, 29, 0, 0, 0, 0, DateTimeKind.Utc), "South Dakota exorcists" },
-                    { 5, new DateTime(2019, 11, 30, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 10, 8, 0, 0, 0, 0, DateTimeKind.Utc), "New York goblins" },
-                    { 4, new DateTime(2020, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 10, 5, 0, 0, 0, 0, DateTimeKind.Utc), "Illinois ants" },
-                    { 2, new DateTime(2020, 5, 16, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 7, 23, 0, 0, 0, 0, DateTimeKind.Utc), "Vermont elves" },
-                    { 1, new DateTime(2019, 7, 15, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 9, 21, 0, 0, 0, 0, DateTimeKind.Utc), "Arizona werewolves" },
-                    { 3, new DateTime(2020, 2, 16, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 6, 7, 0, 0, 0, 0, DateTimeKind.Utc), "Iowa ogres" }
+                    { 6, new DateTime(2020, 2, 25, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 9, 19, 0, 0, 0, 0, DateTimeKind.Utc), "Texas werewolves" },
+                    { 5, new DateTime(2019, 12, 7, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 17, 0, 0, 0, 0, DateTimeKind.Utc), "Maine kangaroos" },
+                    { 4, new DateTime(2019, 12, 2, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 18, 0, 0, 0, 0, DateTimeKind.Utc), "Massachusetts goblins" },
+                    { 2, new DateTime(2020, 7, 10, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 6, 0, 0, 0, 0, DateTimeKind.Utc), "Connecticut rabbits" },
+                    { 1, new DateTime(2020, 5, 13, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 10, 0, 0, 0, 0, DateTimeKind.Utc), "Colorado bears" },
+                    { 3, new DateTime(2020, 3, 1, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 8, 0, 0, 0, 0, DateTimeKind.Utc), "Alaska oracles" }
                 });
 
             migrationBuilder.InsertData(
@@ -143,28 +146,28 @@ namespace PersonnelManagement.DataAccsess.Migrations
                 columns: new[] { "RoleId", "CreatedOn", "ModifiedOn", "Name" },
                 values: new object[,]
                 {
-                    { 5, new DateTime(2019, 8, 13, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 5, 0, 0, 0, 0, DateTimeKind.Utc), "Delfina Carroll" },
-                    { 1, new DateTime(2019, 8, 29, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 17, 0, 0, 0, 0, DateTimeKind.Utc), "Verna Nitzsche" },
-                    { 2, new DateTime(2019, 9, 29, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 7, 1, 0, 0, 0, 0, DateTimeKind.Utc), "Marcus Runolfsdottir" },
-                    { 3, new DateTime(2019, 11, 28, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 9, 0, 0, 0, 0, DateTimeKind.Utc), "Emilio Bayer" },
-                    { 4, new DateTime(2019, 10, 23, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 9, 19, 0, 0, 0, 0, DateTimeKind.Utc), "Lindsey Kuphal" },
-                    { 6, new DateTime(2019, 12, 27, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 20, 0, 0, 0, 0, DateTimeKind.Utc), "Makenzie Hills" }
+                    { 5, new DateTime(2020, 3, 5, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 4, 7, 0, 0, 0, 0, DateTimeKind.Utc), "Kamren Gulgowski" },
+                    { 1, new DateTime(2019, 8, 24, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 26, 0, 0, 0, 0, DateTimeKind.Utc), "Dimitri Johns" },
+                    { 2, new DateTime(2020, 5, 16, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 18, 0, 0, 0, 0, DateTimeKind.Utc), "Reina O'Kon" },
+                    { 3, new DateTime(2020, 5, 7, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 21, 0, 0, 0, 0, DateTimeKind.Utc), "Tiffany Dibbert" },
+                    { 4, new DateTime(2019, 10, 8, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 6, 21, 0, 0, 0, 0, DateTimeKind.Utc), "Rocky Kirlin" },
+                    { 6, new DateTime(2020, 1, 12, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc), "Eric Kreiger" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Personnels",
-                columns: new[] { "PersonnelId", "CreatedOn", "DateOfRecuitment", "DepartmentId", "EmploymentendDate", "JobId", "LastName", "ModifiedOn", "Name", "Salary" },
+                columns: new[] { "PersonnelId", "CreatedOn", "DateOfRecuitment", "DepartmentId", "EmploymentendDate", "JobId", "LastName", "ModifiedOn", "Name", "Password", "Salary", "Token", "UserName" },
                 values: new object[,]
                 {
-                    { 5, new DateTime(2020, 6, 10, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 11, 0, 0, 0, 0, DateTimeKind.Utc), 1, new DateTime(2019, 7, 24, 0, 0, 0, 0, DateTimeKind.Utc), 1, "Gerlach", new DateTime(2020, 1, 3, 0, 0, 0, 0, DateTimeKind.Utc), "Roberto", 12500.75m },
-                    { 8, new DateTime(2020, 3, 6, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 10, 24, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2020, 6, 17, 0, 0, 0, 0, DateTimeKind.Utc), 1, "Crist", new DateTime(2020, 3, 13, 0, 0, 0, 0, DateTimeKind.Utc), "Natalia", 20001.20m },
-                    { 9, new DateTime(2019, 8, 29, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 5, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2019, 12, 24, 0, 0, 0, 0, DateTimeKind.Utc), 2, "Cronin", new DateTime(2019, 11, 7, 0, 0, 0, 0, DateTimeKind.Utc), "Rosalee", 22501.35m },
-                    { 1, new DateTime(2019, 11, 25, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 29, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 10, 15, 0, 0, 0, 0, DateTimeKind.Utc), 3, "Beatty", new DateTime(2019, 10, 23, 0, 0, 0, 0, DateTimeKind.Utc), "Jacey", 2500.15m },
-                    { 4, new DateTime(2020, 2, 6, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 1, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2020, 4, 10, 0, 0, 0, 0, DateTimeKind.Utc), 3, "Yundt", new DateTime(2019, 8, 10, 0, 0, 0, 0, DateTimeKind.Utc), "Vance", 10000.60m },
-                    { 3, new DateTime(2019, 10, 19, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 22, 0, 0, 0, 0, DateTimeKind.Utc), 1, new DateTime(2019, 9, 24, 0, 0, 0, 0, DateTimeKind.Utc), 4, "Hickle", new DateTime(2020, 5, 7, 0, 0, 0, 0, DateTimeKind.Utc), "Luna", 7500.45m },
-                    { 6, new DateTime(2019, 8, 17, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 21, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2020, 5, 26, 0, 0, 0, 0, DateTimeKind.Utc), 4, "Labadie", new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Utc), "Josiane", 15000.90m },
-                    { 2, new DateTime(2019, 10, 3, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 12, 8, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2020, 2, 9, 0, 0, 0, 0, DateTimeKind.Utc), 6, "Emmerich", new DateTime(2020, 3, 31, 0, 0, 0, 0, DateTimeKind.Utc), "Flavie", 5000.30m },
-                    { 7, new DateTime(2020, 3, 11, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 2, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2020, 1, 10, 0, 0, 0, 0, DateTimeKind.Utc), 6, "Rippin", new DateTime(2019, 12, 15, 0, 0, 0, 0, DateTimeKind.Utc), "Gabriella", 17501.05m }
+                    { 1, new DateTime(2020, 6, 26, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 26, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2020, 4, 20, 0, 0, 0, 0, DateTimeKind.Utc), 1, "Hayes", new DateTime(2020, 7, 5, 0, 0, 0, 0, DateTimeKind.Utc), "Neal", "Mr.", 2500.15m, null, "Product Branding Specialist" },
+                    { 7, new DateTime(2019, 8, 5, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 1, 14, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2019, 11, 13, 0, 0, 0, 0, DateTimeKind.Utc), 1, "Sawayn", new DateTime(2020, 7, 12, 0, 0, 0, 0, DateTimeKind.Utc), "Donnell", "Miss", 17501.05m, null, "Principal Solutions Specialist" },
+                    { 9, new DateTime(2019, 8, 13, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 3, 10, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 8, 24, 0, 0, 0, 0, DateTimeKind.Utc), 1, "Nienow", new DateTime(2020, 5, 31, 0, 0, 0, 0, DateTimeKind.Utc), "Merritt", "Mrs.", 22501.35m, null, "District Response Facilitator" },
+                    { 6, new DateTime(2019, 12, 19, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 7, 5, 0, 0, 0, 0, DateTimeKind.Utc), 2, new DateTime(2020, 5, 7, 0, 0, 0, 0, DateTimeKind.Utc), 2, "Ondricka", new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Utc), "Sebastian", "Mr.", 15000.90m, null, "National Communications Executive" },
+                    { 3, new DateTime(2020, 4, 26, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 8, 9, 0, 0, 0, 0, DateTimeKind.Utc), 2, new DateTime(2019, 11, 6, 0, 0, 0, 0, DateTimeKind.Utc), 3, "Ullrich", new DateTime(2020, 6, 24, 0, 0, 0, 0, DateTimeKind.Utc), "Laila", "Mr.", 7500.45m, null, "Direct Accounts Engineer" },
+                    { 5, new DateTime(2020, 4, 3, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 12, 13, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2020, 3, 31, 0, 0, 0, 0, DateTimeKind.Utc), 5, "Christiansen", new DateTime(2019, 11, 11, 0, 0, 0, 0, DateTimeKind.Utc), "Natasha", "Dr.", 12500.75m, null, "Dynamic Functionality Analyst" },
+                    { 8, new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 11, 12, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 8, 20, 0, 0, 0, 0, DateTimeKind.Utc), 5, "Vandervort", new DateTime(2019, 10, 23, 0, 0, 0, 0, DateTimeKind.Utc), "Annamarie", "Mr.", 20001.20m, null, "Human Functionality Assistant" },
+                    { 2, new DateTime(2020, 7, 25, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2020, 5, 30, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2019, 10, 28, 0, 0, 0, 0, DateTimeKind.Utc), 6, "Baumbach", new DateTime(2020, 3, 25, 0, 0, 0, 0, DateTimeKind.Utc), "Melisa", "Dr.", 5000.30m, null, "Future Implementation Liaison" },
+                    { 4, new DateTime(2020, 5, 27, 0, 0, 0, 0, DateTimeKind.Utc), new DateTime(2019, 12, 1, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 10, 16, 0, 0, 0, 0, DateTimeKind.Utc), 6, "Kunde", new DateTime(2019, 9, 28, 0, 0, 0, 0, DateTimeKind.Utc), "Helena", "Miss", 10000.60m, null, "Dynamic Tactics Analyst" }
                 });
 
             migrationBuilder.InsertData(
@@ -172,12 +175,12 @@ namespace PersonnelManagement.DataAccsess.Migrations
                 columns: new[] { "Id", "CreatedOn", "JobId", "ModifiedOn", "RoleId" },
                 values: new object[,]
                 {
-                    { 2, new DateTime(2019, 11, 23, 0, 0, 0, 0, DateTimeKind.Utc), 2, new DateTime(2020, 5, 19, 0, 0, 0, 0, DateTimeKind.Utc), 1 },
-                    { 5, new DateTime(2020, 3, 21, 0, 0, 0, 0, DateTimeKind.Utc), 5, new DateTime(2020, 4, 23, 0, 0, 0, 0, DateTimeKind.Utc), 1 },
-                    { 6, new DateTime(2019, 12, 7, 0, 0, 0, 0, DateTimeKind.Utc), 6, new DateTime(2020, 1, 28, 0, 0, 0, 0, DateTimeKind.Utc), 1 },
-                    { 1, new DateTime(2019, 9, 14, 0, 0, 0, 0, DateTimeKind.Utc), 1, new DateTime(2019, 11, 19, 0, 0, 0, 0, DateTimeKind.Utc), 2 },
-                    { 3, new DateTime(2020, 4, 4, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 10, 15, 0, 0, 0, 0, DateTimeKind.Utc), 3 },
-                    { 4, new DateTime(2020, 6, 18, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2019, 12, 20, 0, 0, 0, 0, DateTimeKind.Utc), 3 }
+                    { 2, new DateTime(2020, 7, 16, 0, 0, 0, 0, DateTimeKind.Utc), 2, new DateTime(2020, 2, 3, 0, 0, 0, 0, DateTimeKind.Utc), 1 },
+                    { 5, new DateTime(2020, 1, 9, 0, 0, 0, 0, DateTimeKind.Utc), 5, new DateTime(2020, 3, 4, 0, 0, 0, 0, DateTimeKind.Utc), 1 },
+                    { 1, new DateTime(2020, 6, 3, 0, 0, 0, 0, DateTimeKind.Utc), 1, new DateTime(2020, 3, 5, 0, 0, 0, 0, DateTimeKind.Utc), 2 },
+                    { 4, new DateTime(2020, 5, 12, 0, 0, 0, 0, DateTimeKind.Utc), 4, new DateTime(2020, 5, 9, 0, 0, 0, 0, DateTimeKind.Utc), 2 },
+                    { 6, new DateTime(2020, 2, 14, 0, 0, 0, 0, DateTimeKind.Utc), 6, new DateTime(2020, 7, 1, 0, 0, 0, 0, DateTimeKind.Utc), 4 },
+                    { 3, new DateTime(2020, 7, 26, 0, 0, 0, 0, DateTimeKind.Utc), 3, new DateTime(2019, 9, 16, 0, 0, 0, 0, DateTimeKind.Utc), 5 }
                 });
 
             migrationBuilder.CreateIndex(

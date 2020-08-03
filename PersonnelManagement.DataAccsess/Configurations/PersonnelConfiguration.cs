@@ -15,6 +15,8 @@ namespace PersonnelManagement.DataAccsess.Configurations
             builder.Property(p => p.PersonnelId).UseIdentityColumn();
             builder.Property(p => p.Name).IsRequired().HasMaxLength(200);
             builder.Property(p => p.LastName).IsRequired().HasMaxLength(200);
+            builder.Property(p => p.UserName).IsRequired().HasMaxLength(200);
+            builder.Property(p => p.Password).IsRequired().HasMaxLength(50);
             builder.Property(p => p.EmploymentendDate).IsRequired().HasColumnType("datetime");
             builder.Property(p => p.DateOfRecuitment).IsRequired().HasColumnType("datetime");
             builder.Property(p => p.CreatedOn).IsRequired().HasColumnType("datetime");
