@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FrameworkCore.Utilities.Mappings;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PersonnelManagement.Business.Abstract;
@@ -10,12 +11,15 @@ using PersonnelManagement.Business.ValidationRules.FluentValidation;
 using PersonnelManagement.EntityFramework.Concrate;
 using PersonnelManagement.EntityFramework.Concrate.DTOs;
 using PersonnelManagement.WebAPI.Filters;
+using PersonnelManagement.WebAPI.Filters.Authentication;
 using PersonnelManagement.WebAPI.Filters.FluentValidation;
+using PersonnelManagement.WebAPI.Filters.Middleware;
 
 namespace PersonnelManagement.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AuthenticationFilter]
     public class DepartmentController : ControllerBase
     {
         private IDepartmentService _departmentService;
@@ -32,8 +36,10 @@ namespace PersonnelManagement.WebAPI.Controllers
             return Ok(_autoMapperBase.MapToSameList<Department, DepartmentWithPersonnelDto>(departments));
         }
         [HttpGet]
+
         public  IActionResult GetAll()
         {
+           
             List<Department> departments =  _departmentService.GetAll().ToList();
             return Ok(_autoMapperBase.MapToSameList<Department, DepartmentDto>(departments));
         }

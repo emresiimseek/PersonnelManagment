@@ -28,6 +28,7 @@ using FrameworkCore.Helpers;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using PersonnelManagement.WebAPI.Filters.Middleware;
 
 namespace PersonnelManagement.WebAPI
 {
@@ -123,7 +124,7 @@ namespace PersonnelManagement.WebAPI
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseMiddleware<JwtMiddleware>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

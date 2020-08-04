@@ -8,6 +8,7 @@ namespace FrameworkCore.Abstract
    public interface IUnitOfWork
     {
         IDepartmentRepository Department { get; }
+        IPersonnelRepository Personnel { get; }
         Task CommitAsync();
         void Commit();
     }

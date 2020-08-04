@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PersonnelManagement.Business.Abstract;
 using PersonnelManagement.EntityFramework.Concrate;
+using PersonnelManagement.WebAPI.Filters.Authentication;
 
 namespace PersonnelManagement.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class LoginController : ControllerBase
     {
 
@@ -31,9 +31,9 @@ namespace PersonnelManagement.WebAPI.Controllers
 
             if (personnel == null)
                 return  BadRequest(new { message = "Username or password is incorrect" });
-
             return  Ok(personnel);
         }
+
 
     }
 }

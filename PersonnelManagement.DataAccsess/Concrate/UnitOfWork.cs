@@ -13,12 +13,15 @@ namespace FrameworkCore.Concrate
     {
         public DbContext _dbContext;
         private DepartmentRepository _department { get; set; }
+        private PersonnelRepository _personnel { get; set; }
         public UnitOfWork(DbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         public IDepartmentRepository Department => _department = _department ?? new DepartmentRepository(_dbContext);
+
+        public IPersonnelRepository Personnel => _personnel = _personnel ?? new PersonnelRepository(_dbContext);
 
         public void Commit()
         {

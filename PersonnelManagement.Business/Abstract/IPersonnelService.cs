@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonnelManagement.Business.Abstract
 {
-    public interface IPersonnelService
+    public interface IPersonnelService:IService<Personnel>
     {
 
         Task<Personnel> Authenticate(string kullaniciAdi, string sifre);
